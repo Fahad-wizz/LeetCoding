@@ -122,3 +122,27 @@ public class CheckSubarraySum {
 }
 }
 }
+
+
+// class Solution {
+//     public boolean checkSubarraySum(int[] nums, int k) {
+//         Map<Integer, Integer> remainderIndexMap = new HashMap<>();
+//         int sum = 0;
+//         remainderIndexMap.put(0, -1);
+        
+//         for (int i = 0; i < nums.length; i++) {
+//             sum += nums[i];
+//             if (k != 0) sum %= k;
+            
+//             // Check if the remainder has been seen before
+//             if (remainderIndexMap.containsKey(sum)) {
+//                 if (i - remainderIndexMap.get(sum) > 1) // If subarray length is greater than 1, return true
+//                     return true;
+//             } else { // Store the index of the first occurrence of the remainder
+//                 remainderIndexMap.put(sum, i);
+//             }
+//         }
+//         // If no valid subarray is found, return false
+//         return false;
+//     }
+// }
